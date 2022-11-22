@@ -1,12 +1,10 @@
-.navbar-lewagon {
-  justify-content: space-between;
+.navbar-hairbnb {
   background: white;
+  display: flex;
+  justify-content: space-between;
+
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-hairbnb .navbar-brand img {
+  width: 80px;
 }
