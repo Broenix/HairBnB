@@ -1,0 +1,2 @@
+class Wig < ApplicationRecord
+end
