@@ -1,0 +1,4 @@
+class WigsController < ApplicationController
+
+  
+end
