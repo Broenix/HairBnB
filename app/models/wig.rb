@@ -1,5 +1,5 @@
 class Wig < ApplicationRecord
-  COLOR = %W[blanche châtain rose jaune noire]
+  COLOR = %W[blanche chatain rose jaune noire]
 
   has_one_attached :photo
 

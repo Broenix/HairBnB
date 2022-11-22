@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :bookings_as_a_owner, class_name: "Booking", through: :wigs, source: :bookings
   has_many :wigs, dependent: :destroy
 
-  # validates :name, presence: true
+  validates :name, presence: true
+  validates :last_name, presence: true
 end

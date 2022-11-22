@@ -16,19 +16,19 @@ Booking.destroy_all
 #USERS
 
 file = File.open(Rails.root.join("db/seeds/images/users/bruce-willis.jpeg"))
-bruce = User.create!(email: "brucewillis@gmail.com", password:"secret")
+bruce = User.create!(name: "Bruce", last_name: "Willis", email: "brucewillis@gmail.com", password:"secret")
 bruce.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/users/cameron-diaz.jpeg"))
-cameron = User.create!(email: "camerondiaz@gmail.com", password:"secret")
+cameron = User.create!(name: "Cameron", last_name: "Diaz",email: "camerondiaz@gmail.com", password:"secret")
 cameron.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/users/dwayne-johnson.jpg"))
-dwayne = User.create!(email: "dwaynejohnson@gmail.com", password:"secret")
+dwayne = User.create!(name: "Dwayne", last_name: "Johnson", email: "dwaynejohnson@gmail.com", password:"secret")
 dwayne.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpg")
 
 file = File.open(Rails.root.join("db/seeds/images/users/vincent-lagaf.png"))
-vincent = User.create!(email: "vincent-lagaf@gmail.com", password:"secret")
+vincent = User.create!(name: "Vincent", last_name: "Lagaf", email: "vincent-lagaf@gmail.com", password:"secret")
 vincent.photo.attach(io: file, filename: "photo.jpg", content_type: "image/png")
 
 
@@ -47,7 +47,7 @@ crête = Wig.create!(name: "Crête", description: "Perruque tulle semi-fin - Cr�
 crête.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin frange.jpeg"))
-frange = Wig.create!(name: "Perruque avec Frange", description: "Perruque tulle semi-fin", renting_price: 40, user: vincent, color: "châtain")
+frange = Wig.create!(name: "Perruque avec Frange", description: "Perruque tulle semi-fin", renting_price: 40, user: vincent, color: "chatain")
 frange.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin rose.jpeg"))
@@ -63,7 +63,7 @@ mulet = Wig.create!(name: "Perruqe Mulet", description: "Perruque tulle semi-fin
 mulet.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle bordé.jpeg"))
-perruquebordée = Wig.create!(name: "Perruqe tule bordé", description: "Perruque tulle semi-fin bordé", renting_price: 200, user: dwayne, color: "blanc")
+perruquebordée = Wig.create!(name: "Perruqe tule bordé", description: "Perruque tulle semi-fin bordé", renting_price: 200, user: dwayne, color: "blanche")
 perruquebordée.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # BOOKINGS
