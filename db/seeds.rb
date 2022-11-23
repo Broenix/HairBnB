@@ -68,6 +68,7 @@ perruquebordée.photo.attach(io: file, filename: "photo.jpg", content_type: "ima
 
 # BOOKINGS
 
+
 booking1 = Booking.create!(
     start_date: "2022-11-24",
     end_date:   "2022-11-27",
