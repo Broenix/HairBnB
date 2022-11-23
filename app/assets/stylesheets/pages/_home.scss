@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .banner {
-  background-size:cover;
+  background-size:auto;
   background-position: center;
   padding: 300px 0;
 
@@ -10,7 +10,7 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
 
 }
@@ -40,8 +40,5 @@
 .hometextep {
   font-family: 'Lora', serif;
   font-size: 25px;
-}
-
-.container {
-  color: red;
+  font-style: italic
 }

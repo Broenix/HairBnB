@@ -38,8 +38,8 @@ file = File.open(Rails.root.join("db/seeds/images/wigs/Barbe.jpeg"))
 barbe = Wig.create!(name: "Barbe", description: "Court, Dégradé", renting_price: 50, user: vincent, color: "chatain")
 barbe.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
-file = File.open(Rails.root.join("db/seeds/images/wigs/monarque.jpeg"))
-monarque = Wig.create!(name: "monarque", description: "Court, Dégradé", renting_price: 100, user: vincent, color: "blanche")
+file = File.open(Rails.root.join("db/seeds/images/wigs/Monarque.jpeg"))
+monarque = Wig.create!(name: "Monarque", description: "Court, Dégradé", renting_price: 100, user: vincent, color: "blanche")
 monarque.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin crête.jpeg"))
@@ -59,14 +59,15 @@ file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin r
 époque.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle mulet.jpeg"))
-mulet = Wig.create!(name: "Perruqe Mulet", description: "Perruque tulle semi-fin - Perruque bas du crâne", renting_price: 100, user: bruce, color: "noire")
+mulet = Wig.create!(name: "Perruque Mulet", description: "Perruque tulle semi-fin - Perruque bas du crâne", renting_price: 100, user: bruce, color: "noire")
 mulet.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle bordé.jpeg"))
-perruquebordée = Wig.create!(name: "Perruqe tule bordé", description: "Perruque tulle semi-fin bordé", renting_price: 200, user: dwayne, color: "blanche")
+perruquebordée = Wig.create!(name: "Perruque tule bordé", description: "Perruque tulle semi-fin bordé", renting_price: 200, user: dwayne, color: "blanche")
 perruquebordée.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # BOOKINGS
+
 
 booking1 = Booking.create!(
     start_date: "2022-11-24",
