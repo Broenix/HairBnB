@@ -1,10 +1,17 @@
-.container {
-  flex-grow: 0;
+.container_wig {
+  // flex-grow: 0;
   height: 500px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
 
+  .image_tag{
+    margin: 20px;
+  }
 
-  .card_infos_wigs {
-    margin-top: 50;
-
+  .name_photo_desc{
+    background-color: white;
+    width: 400px;
+    object-fit: cover;
   }
 }
