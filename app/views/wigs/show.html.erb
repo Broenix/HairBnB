@@ -1,14 +1,14 @@
-<div class= "container_wig">
-  <div class= "name_photo_desc" >
+<div class= "container_wig mt-5 mb-5">
+  <div class= "name_photo_desc">
     <h1><%= @wig.name %></h1>
     <%= image_tag @wig.photo, width:300, height: 300 %>
     <div class="card_infos_wigs" >
         <p><strong>Description </strong></p>
         <p><%= @wig.description %></p>
         <p><strong>Couleur </strong></p>
-        <p><%= @wig.color %> </p>
+        <p><%= @wig.color %></p>
         <p><strong>Prix </strong></p>
-        <p><%= @wig.renting_price %> </p>
+        <p><%= @wig.renting_price %> €/ jour</p>
     </div>
   </div>
   <div class="form_bookings">
