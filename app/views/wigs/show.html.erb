@@ -1,14 +1,28 @@
-<div class= "container">
-    <div class="col-12 d-flex">
-    <div class= "name_&_photo" >
-      <%= image_tag @wig.photo,width:300 %>
+
+<div class= "container_wig mt-5 mb-5">
+  <div class= "name_photo_desc">
+    <h1><%= @wig.name %></h1>
+    <%= image_tag @wig.photo, width:300, height: 300 %>
+    <div class="card_infos_wigs" >
+        <p><strong>Description </strong></p>
+        <p><%= @wig.description %></p>
+        <p><strong>Couleur </strong></p>
+        <p><%= @wig.color %></p>
+        <p><strong>Prix </strong></p>
+        <p><%= @wig.renting_price %> €/ jour</p>
     </div>
-    <div class="card_infos_wigs align-items-center">
-        <p> <%= @wig.description %> </p>
-        <p><strong>Couleur : </strong> <%= @wig.color %> </p>
-        <p><strong>Description : </strong><%= @wig.renting_price %> €/jour</p>
-      </div>
+  </div>
+  <div class="form_bookings">
+    <div class="bg-white rounded p-4">
+      <p></strong><%= @wig.renting_price %> €/jour</p>
+      <h1>Louer la perruque</h1>
+      <%= simple_form_for [@wig, @booking] do |f| %>
+        <%= f.input :start_date, html5: true, placeholder: 'Début de location' %>
+        <%= f.input :end_date, html5: true, placeholder: 'Fin de location' %>
+        <%= f.submit "Soumettre ma demande", class: 'btn btn-primary' %>
+      <% end %>
     </div>
+  </div>
 </div>
 
 
