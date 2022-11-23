@@ -15,13 +15,6 @@
 
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
 .btn-gradient {
   color: rgb(239, 239, 239);
   padding: 20px 240px;
@@ -30,6 +23,7 @@
   background: linear-gradient(#D90368, #f099b9);
   transition: background 0.3s ease;
   border: 1px solid #c40f79;
+  margin: 10px;
 }
 
 .btn-gradient:hover {
@@ -40,4 +34,7 @@
 .hometextep {
   font-family: 'Lora', serif;
   font-size: 25px;
+  margin: 10px;
+  padding: 1px 200px;
+
 }
