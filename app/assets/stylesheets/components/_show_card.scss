@@ -1,6 +1,6 @@
 .container_wig {
   // flex-grow: 0;
-  height: 500px;
+  height: 600px;
   justify-content: space-around;
   align-items: center;
   display: flex;
@@ -12,6 +12,20 @@
   .name_photo_desc{
     background-color: white;
     width: 400px;
-    object-fit: cover;
+    padding: 15px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    p{
+      padding: -5px;
+    }
+  }
+
+  .card_infos_wigs{
+    padding-top: 10px;
+
   }
 }
