@@ -1,1 +1,17 @@
 
+
+.btn-homepage {
+  color: rgb(239, 239, 239);
+  padding: 20px 240px;
+  border-radius: 20px;
+  font-weight: bold;
+  background: linear-gradient(#D90368, #f099b9);
+  transition: background 0.3s ease;
+  border: 1px solid #c40f79;
+  margin: 10px;
+}
+
+.btn-homepage:hover {
+  background: linear-gradient(#ff1476, #da0f78);
+  color: rgb(238, 218, 225);
+}
