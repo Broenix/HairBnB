@@ -2,9 +2,14 @@
   background: white;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
 }
 
 .navbar-hairbnb .navbar-brand img {
   width: 80px;
+}
+
+.navbar-hairbnb .navbar-collapse {
+  flex-grow: 0;
 }
