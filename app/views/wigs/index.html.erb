@@ -6,7 +6,7 @@
               <h3 class="fs-3 text fw-bold"><%= wig.name.capitalize %></h3>
               <p class="fw-lighter"><%= wig.description %></p>
               <%= link_to "Voir les détails", wig_path(wig), class: "rounded-3 btn btn-outline-dark" %>
-              <p class="fs-3 d-flex justify-content-end align-items-center"> <%= wig.renting_price %>€</p>
+              <p class="fs-4 d-flex justify-content-end align-items-center"> <%= wig.renting_price %>€ / jour</p>
           </div>
     </div>
  <% end %>
