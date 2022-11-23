@@ -1,48 +1,17 @@
 <%# navbar %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://fab.festivalbordeaux.com/wp-content/uploads/2017/06/cropped-logo-FAB.png" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-
-          <li class="nav-item dropdown">
-            <%= image_tag "https://cdn-icons-png.flaticon.com/512/1625/1625918.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <%# blablanner%>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.reconversionprofessionnelle.org/wp-content/uploads/2021/11/Rangement-de-perruques-990x556.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://pixabay.com/get/g1225e4dc5ec08c2144f6911554ecd768e9aab937ce618a47f88098e8b06f991919286670349144e1a7c22afc625030e2.jpg);">
 
 </div>
     <div class="container"><h1>Hair <strong> Bold and Brave </strong>!</h1>
-    <p>Atelier de fabrication et de location de perruques et postiches  pour le cinéma, la mode, le spectacle vivant et la dignité.</p>
-    <p>Cliquez ci-dessous pour explorer nos moumoutes</p>  </div>
+    <div class="hometextep"><p>Atelier de fabrication et de location de perruques et postiches  pour le cinéma, la mode, le spectacle vivant et la dignité.</p>
+    <p>Cliquez ci-dessous pour explorer nos moumoutes </p>  </div></div>
 <div class="d-flex justify-content-center">
-<%= link_to "Here wig go !!", "#", class: "btn btn-gradient btn-lg mt-4" %>
+<%= link_to "Here wig go ! ", "#", class: "btn btn-gradient btn-lg mt-4" %>
 </div>
+
+
+
+
 
 <%# simpleform btn-primary %>
