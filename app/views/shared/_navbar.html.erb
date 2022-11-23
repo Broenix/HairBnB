@@ -1,13 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-hairbnb">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-<<<<<<< HEAD
-      <%= image_tag "HAIR BnB logo.png" %>
+      <%=   age_tag "HAIR BnB logo.png" %>
     <% end %>
-=======
-    <%= image_tag "logo.png" %>
-  <% end %>
->>>>>>> 92b787f222b63830fc0f209959f7d872e5708ffc
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,7 +11,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
-<<<<<<< HEAD
         <div class="searchbar d-flex">
           <li class="nav-item active">
             <form class="d-flex" role="search">
@@ -28,14 +22,6 @@
             <%= image_tag "bruce-willis.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Messages", "#", class: "dropdown-item" %>
-=======
-          <li class="nav-item dropdown">
-            <%= image_tag "bruce-willis.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Compte", "#", class: "dropdown-item" %>
-              <%= link_to "Messages", "#", class: "dropdown-item" %>
-              <%= link_to "Réservations", "#", class: "dropdown-item" %>
->>>>>>> 92b787f222b63830fc0f209959f7d872e5708ffc
               <%= link_to "Favoris", "#", class: "dropdown-item" %>
               <%= link_to "Aide", "#", class: "dropdown-item" %>
               <%= link_to "Déconnexion", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
