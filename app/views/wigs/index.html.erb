@@ -3,12 +3,11 @@
  <% @wigs.each do |wig| %>
     <div class="card m-2">
       <div class="" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
          <%= cl_image_tag wig.photo.key, height: 300, width: 300, crop: :fill %>
           <div class="card-body">
             <h5><%= wig.name %></h5>
             <p class="card-text"><%= wig.description %></p>
-            <a class="button-wig-card" href="#" Rent>Rent</a>
+            <%= link_to "Rent", wig_path(wig), class: "rounded-3 btn btn-outline-dark" %>
           </div>
       </div>
     </div>
