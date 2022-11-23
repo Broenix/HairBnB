@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   flex-grow: O;
   height: 500px;
@@ -6,6 +7,36 @@
 
   .card_info_wigs {
     margin-top: 50;
+=======
+.container_wig {
+  // flex-grow: 0;
+  height: 600px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+
+  .image_tag{
+    margin: 20px;
+  }
+
+  .name_photo_desc{
+    background-color: white;
+    width: 400px;
+    padding: 15px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .card_infos_wigs{
+    padding-top: 10px;
+
+>>>>>>> 6428629da174f9faf6001ede8480eedc7c3aba29
+  }
+  p{
+    padding: -5px;
   }
 }
 
