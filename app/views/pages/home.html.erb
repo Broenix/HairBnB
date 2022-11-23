@@ -1,64 +1,17 @@
 <%# navbar %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
-      </ul>
-    </div>
-  </div>
-</div>
-
 <%# blablanner%>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1634315775834-3e1ac73de6b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);">
-  <div class="container">
-    <h1>Les filles sur la route vous offrent <strong> DES WIGS </strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and rent one of our wigs and become pretty.</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://pixabay.com/get/g1225e4dc5ec08c2144f6911554ecd768e9aab937ce618a47f88098e8b06f991919286670349144e1a7c22afc625030e2.jpg);">
 
-  </div>
 </div>
-<p>j'aime le nougat</p>
+    <div class="container"><h1>Hair <strong> Bold and Brave </strong>!</h1>
+    <div class="hometextep"><p>Atelier de fabrication et de location de perruques et postiches  pour le cinéma, la mode, le spectacle vivant et la dignité.</p>
+    <p>Cliquez ci-dessous pour explorer nos moumoutes </p>  </div></div>
 <div class="d-flex justify-content-center">
-<%= link_to "Here wig go !!", "#", class: "btn btn-gradient btn-lg mt-4" %>
+<%= link_to "Here wig go ! ", "#", class: "btn btn-gradient btn-lg mt-4" %>
 </div>
+
+
+
+
 
 <%# simpleform btn-primary %>
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> @lesfillessurlaroute
-  </div>
-</div>

@@ -1,8 +1,8 @@
 // Specific CSS for your home-page
 .banner {
-  background-size: 50%;
+  background-size:cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 300px 0;
 
 }
 
@@ -12,6 +12,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+
 }
 
 .banner p {
@@ -21,44 +22,26 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.footer {
-  background: #F4F4F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
-}
-
 .btn-gradient {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
+  color: rgb(239, 239, 239);
+  padding: 20px 240px;
+  border-radius: 20px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(#D90368, #f099b9);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #c40f79;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+  background: linear-gradient(#ff1476, #da0f78);
+  color: rgb(238, 218, 225);
+}
+
+.hometextep {
+  font-family: 'Lora', serif;
+  font-size: 25px;
+}
+
+.container {
+  color: red;
 }
