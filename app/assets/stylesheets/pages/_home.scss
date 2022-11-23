@@ -1,8 +1,8 @@
 // Specific CSS for your home-page
 .banner {
-  background-size:contain;
+  background-size:cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 300px 0;
 
 }
 
@@ -12,6 +12,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+
 }
 
 .banner p {
@@ -22,16 +23,25 @@
 }
 
 .btn-gradient {
-  color: white;
+  color: rgb(239, 239, 239);
   padding: 20px 240px;
   border-radius: 20px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(#D90368, #f099b9);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #c40f79;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+  background: linear-gradient(#ff1476, #da0f78);
+  color: rgb(238, 218, 225);
+}
+
+.hometextep {
+  font-family: 'Lora', serif;
+  font-size: 25px;
+}
+
+.container {
+  color: red;
 }
