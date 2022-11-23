@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-12 col-sm-6 mb-4 d-flex flex-column"
+    <% @list.wigs.each do |wig| %>
+      <h1><%= wig.name %></h1>
+      <%= image_tag wig.poster_url,
+      width:150 %>
+      <%= wig.description %>
+      <%= wig.color %>
+      <%= wig.renting_price %>
+    <% end %>
+</div>
