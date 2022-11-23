@@ -9,9 +9,9 @@
 
 
 puts "Cleaning database..."
+Booking.destroy_all
 User.destroy_all
 Wig.destroy_all
-Booking.destroy_all
 
 #USERS
 
@@ -54,7 +54,7 @@ file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin r
 rose = Wig.create!(name: "Perruque rose", description: "Perruque tulle semi-fin", renting_price: 80, user: vincent, color: "rose")
 rose.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
-file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin rose.jpeg"))
+file = File.open(Rails.root.join("db/seeds/images/wigs/Perruque tulle semi-fin.jpeg"))
 époque = Wig.create!(name: "Perruque d'époque", description: "Perruque tulle semi-fin - D'époque", renting_price: 80, user: cameron, color: "blanche")
 époque.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
