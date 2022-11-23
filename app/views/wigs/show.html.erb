@@ -1,0 +1,14 @@
+<div class= "container">
+    <div class="col-12 col-sm-6 mb-4 d-flex">
+    <div class= "name_&_photo" >
+      <h1><%= @wig.name %></h1>
+      <%= image_tag @wig.photo,
+      width:300 %>
+    </div>
+    <div class="card_infos_wigs" >
+        <p><strong>Description : </strong><%= @wig.description %> </p>
+        <p><strong>Couleur : </strong> <%= @wig.color %> </p>
+        <p><strong>Description : </strong><%= @wig.renting_price %> €/jour</p>
+      </div>
+    </div>
+</div>
