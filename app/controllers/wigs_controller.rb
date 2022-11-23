@@ -1,6 +1,8 @@
 class WigsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
 
-  def show
-    @wig = Wig.find(params[:id])
+  def index
+    @wigs = Wig.all
   end
-end
+
+
