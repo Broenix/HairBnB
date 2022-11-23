@@ -1,2 +1,10 @@
-Yolo
-<%= %>
+<h3>Vos reservations </h3>
+<%= @bookings.each do |booking| %>
+  <div class="card m-2">
+      <div class="card-body">
+        <p class= "btn-btn-warning"> Reservation : <%= image_tag booking.wig.photo, width:100 %>
+        <p class="fw-lighter">Reservation du : <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
+        <p class= btn-btn-warning> Statut : <%= booking.status %>
+      </div>
+    </div>
+  <% end %>
