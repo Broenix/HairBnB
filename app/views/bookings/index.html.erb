@@ -8,7 +8,7 @@
           <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
           <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> image.png <%= booking.user.name %></p>
           <p class= btn-btn-warning> Statut : <%= booking.status %>
-        </div>
+          </div>
       <% end %>
     </div>
   </div>
@@ -20,6 +20,8 @@
               <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
               <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
               <p class= btn-btn-warning> Statut : <%= booking.status %>
+              <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
+              <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
             </div>
           </div>
       <% end %>
