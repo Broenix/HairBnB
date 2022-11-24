@@ -1,7 +1,7 @@
 <div class="container d-flex">
 
     <h3>Vos reservations Théo </h3>
-      <% @bookings.each do |booking| %>
+      <% @bookings_renter.each do |booking| %>
         <div class="card m-2">
             <div class="card-body">
               <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
@@ -12,15 +12,13 @@
       <% end %>
 
     <h3>Mes perruques paul</h3>
-    <div>
-    <% @wigs.each do |wig| %>
+
+      <% @bookings_owner.each do |booking| %>
         <div class="card m-2">
             <div class="card-body">
-              <p class= "btn-btn-warning"> Reservation  <%= image_tag wig.wig.photo, width:100 %>
-              <p class="fw-lighter">Reservation du <%= wig.start_date %> au <%= wig.end_date %> par <%= wig.user.name %></p>
-              <p class= btn-btn-warning> Statut : <%= wig.status %>
+              <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
+              <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
+              <p class= btn-btn-warning> Statut : <%= booking.status %>
             </div>
           </div>
-
-    </div>
-</div>
+      <% end %>
