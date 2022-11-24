@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
     # @bookings = Booking.all
   end
 
-
   def create
     @booking = Booking.new(booking_params)
     @booking.wig_id = params[:wig_id]
