@@ -1,0 +1,23 @@
+<div class="container_form">
+  <div class="col-12 col-md-6 offset-lg-3">
+    <div class="bg-white rounded p-5 m-5">
+      <h3>Mettez votre perruque sur HairBnB !</h3>
+      <%= simple_form_for @wig do |f| %>
+        <%= f.input :photo, as: :file, label: 'Image', class:'label'%>
+
+        <%= f.input :name, label: 'Nom', class:'label' %>
+
+        <%= f.input :description, label: "Description", class:'label' %>
+
+        <div class= "list_color">
+          <%= f.label :color, label: 'Couleur', class:'label' %>
+          <%= f.select :color, Wig::COLOR, include_blank: true %>
+        </div>
+
+        <%= f.input :renting_price, label: 'Prix de location / jour / €', class:'label' %>
+
+        <%= f.submit "Ajouter ma perruque en location", class: 'btn btn-essential' %>
+      <% end %>
+    </div>
+  </div>
+</div>

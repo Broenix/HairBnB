@@ -1,0 +1,31 @@
+.container_form{
+  .btn-essential{
+    color: black;
+    padding: 15px;
+    border-radius: 20px;
+    background: white;
+    transition: background 0.3s ease;
+    border: 1px solid black;
+    margin: 10px;
+
+    &:hover{
+      background: $pink;
+      border: none;
+    }
+  }
+
+  h3{
+    text-align: center;
+    padding-bottom: 15px;
+    margin:10px;
+  }
+
+  .label{
+    padding-top: 4px;
+  }
+
+  .list_color{
+    
+
+  }
+}
