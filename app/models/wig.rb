@@ -1,6 +1,5 @@
 class Wig < ApplicationRecord
   COLOR = %W[Blanche Marron Rose Jaune Noire]
-
   has_one_attached :photo
 
   belongs_to :user

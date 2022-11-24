@@ -1,10 +1,32 @@
-<h3>Vos reservations </h3>
-  <% @bookings.each do |booking| %>
+<h1 style="text-align:center">Tableau de bord</h1>
+<div class="container d-flex">
+  <div>
+    <h3> Mes futures reservations </h3>
     <div class="card m-2">
+      <% @bookings_renter.each do |booking| %>
         <div class="card-body">
           <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
-          <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
+          <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> image.png <%= booking.user.name %></p>
           <p class= btn-btn-warning> Statut : <%= booking.status %>
         </div>
+      <% end %>
+    </div>
+  </div>
+
+        <div><h3> Mes demandes de location</h3>
+        <div class="card m-2">
+      <% @bookings_owner.each do |booking| %>
+            <div class="card-body">
+              <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
+              <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
+              <p class= btn-btn-warning> Statut : <%= booking.status %>
+            </div>
+          </div>
+      <% end %>
       </div>
-  <% end %>
+
+
+
+
+
+</div>
