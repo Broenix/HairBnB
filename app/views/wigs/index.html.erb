@@ -1,15 +1,16 @@
 <div class="row row-cols-lg-4 d-flex justify-content-center">
- <% @wigs.each do |wig| %>
+<% @wigs.each do |wig| %>
+
     <div class="card m-2">
         <%= cl_image_tag wig.photo.key, height: 300, width: 300, crop: :fill %>
           <div class="card-body">
               <h3 class="fs-3 text fw-bold"><%= wig.name.capitalize %></h3>
               <p class="fw-lighter"><%= wig.description %></p>
-              <div class="d-flex justify-content-between ">
-              <p class=" d-flex justify-content-end align-items-center"> <%= wig.renting_price %>€</p>
-              <a href=<%= wig_path(wig) %> class="text-warning stretched-link" > </a>
-              </div>
+                <div class="d-flex justify-content-between ">
+                <p class=" d-flex justify-content-end align-items-center"> <%= wig.renting_price %>€</p>
+                <a href=<%= wig_path(wig) %> class="text-warning stretched-link" > </a>
+                </div>
           </div>
     </div>
- <% end %>
+  <% end %>
 </div>
