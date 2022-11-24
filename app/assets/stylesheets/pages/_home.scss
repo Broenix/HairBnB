@@ -10,30 +10,17 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
 
 }
 
-.btn-gradient {
-  color: rgb(239, 239, 239);
-  padding: 20px 240px;
-  border-radius: 20px;
-  font-weight: bold;
-  background: linear-gradient(#D90368, #f099b9);
-  transition: background 0.3s ease;
-  border: 1px solid #c40f79;
-  margin: 10px;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(#ff1476, #da0f78);
-  color: rgb(238, 218, 225);
-}
 
 .hometextep {
   font-size: 25px;
   margin: 10px;
   padding: 1px 200px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 
 }
