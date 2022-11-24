@@ -13,7 +13,6 @@
   </div>
   <div class="form_bookings">
     <div class="bg-white rounded p-4">
-      <p></strong><%= @wig.renting_price %> €/jour</p>
       <h1>Louer la perruque</h1>
       <%= simple_form_for [@wig, @booking] do |f| %>
         <%= f.input :start_date, html5: true, placeholder: 'Début de location' %>
