@@ -85,5 +85,13 @@ booking2 = Booking.create!(
   wig: perruquebordée
 )
 
+booking3 = Booking.create!(
+  start_date: "2022-11-24",
+  end_date:   "2023-01-24",
+  status:      "pending",
+  user: vincent,
+  wig: mulet
+)
+
 
 puts "Finished!"
