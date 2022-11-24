@@ -48,9 +48,9 @@
   padding: 16px;
 }
 
-#rond {
-  width: 60px;
-  height: 40px;
-  border-radius: 60px / 40px;
-  background: orange;
+.row row-cols-lg-4 d-flex justify-content-center:hover {
+  opacity: 0.8;
+}
+.card:hover {
+  opacity: 0.8;
 }

@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-hairbnb">
   <div class="container-fluid">
-    <%= link_to "/wigs",  class: "navbar-brand" do %>
+    <%= link_to "/",  class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
   <% end %>
 
@@ -10,13 +10,16 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
+        <li class="nav-item">
+
+          <%=link_to"Mettre ma perruque sur HairBnB", new_wig_path, class: "nav-link"%>
+          </li>
           <li class="nav-item dropdown">
             <%= image_tag "bruce-willis.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Compte", "#", class: "dropdown-item" %>
               <%= link_to "Messages", "#", class: "dropdown-item" %>
-              <%= link_to "Réservations", "/bookings", class: "dropdown-item" %>
+              <%= link_to "Réservations", bookings_path, class: "dropdown-item" %>
               <%= link_to "Favoris", "#", class: "dropdown-item" %>
               <%= link_to "Aide", "#", class: "dropdown-item" %>
               <%= link_to "Déconnexion", "#", class: "dropdown-item", data: {turbo_method: :delete} %>

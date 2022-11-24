@@ -12,12 +12,12 @@
     </div>
   </div>
   <div class="form_bookings">
-    <div class="bg-white rounded p-4">
-      <h1>Louer la perruque</h1>
+    <div class="bg-white rounded p-5 m-5">
+      <h3>Louer la perruque</h3>
       <%= simple_form_for [@wig, @booking] do |f| %>
-        <%= f.input :start_date, html5: true, placeholder: 'Début de location' %>
-        <%= f.input :end_date, html5: true, placeholder: 'Fin de location' %>
-        <%= f.submit "Soumettre ma demande", class: 'btn btn-primary' %>
+        <%= f.input :start_date, html5: true, label: "Début de la location" %>
+        <%= f.input :end_date, html5: true, label: 'Fin de location' %>
+        <%= f.submit "Soumettre ma demande", class: 'btn btn-essential' %>
       <% end %>
     </div>
   </div>
