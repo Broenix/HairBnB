@@ -1,10 +1,27 @@
-<h3>Vos reservations à venir </h3>
-  <% @bookings.each do |booking| %>
-    <div class="card m-2">
-        <div class="card-body">
-          <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
-          <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
-          <p class= btn-btn-warning> Statut : <%= booking.status %>
-        </div>
-      </div>
-  <% end %>
+<div class="container d-flex">
+
+    <h3>Vos reservations Théo </h3>
+      <% @bookings.each do |booking| %>
+        <div class="card m-2">
+            <div class="card-body">
+              <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
+              <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
+              <p class= btn-btn-warning> Statut : <%= booking.status %>
+            </div>
+          </div>
+      <% end %>
+
+    <h3>Mes perruques paul</h3>
+    <div>
+    <% @wigs.each do |wig| %>
+        <div class="card m-2">
+            <div class="card-body">
+              <p class= "btn-btn-warning"> Reservation  <%= image_tag wig.wig.photo, width:100 %>
+              <p class="fw-lighter">Reservation du <%= wig.start_date %> au <%= wig.end_date %> par <%= wig.user.name %></p>
+              <p class= btn-btn-warning> Statut : <%= wig.status %>
+            </div>
+          </div>
+
+    </div>
+</div>
+
