@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings_owner = current_user.bookings_as_a_owner
     @bookings_renter = current_user.bookings_as_a_renter
-    # @bookings = Booking.all
   end
 
   def create
@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
     end
   end
 
+
   private
 
   def booking_params
@@ -24,10 +25,4 @@ class BookingsController < ApplicationController
       :start_date,
       :end_date)
   end
-
-  # private
-
-  # def set_wig
-  #   @wig = Wig.find(params[:id])
-  # end
 end
