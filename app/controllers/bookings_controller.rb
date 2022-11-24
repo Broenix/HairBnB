@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+
     @bookings = Wig.find(params[:id])
   end
 end
