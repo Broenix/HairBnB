@@ -1,32 +1,29 @@
-<h1 style="text-align:center">Tableau de bord</h1>
-<div class="container d-flex">
-  <div>
-    <h3> Mes futures reservations </h3>
-    <div class="card m-2">
-      <% @bookings_renter.each do |booking| %>
-        <div class="card-body">
-          <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
-          <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> image.png <%= booking.user.name %></p>
-          <p class= btn-btn-warning> Statut : <%= booking.status %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-        <div><h3> Mes demandes de location</h3>
-        <div class="card m-2">
-      <% @bookings_owner.each do |booking| %>
-            <div class="card-body">
-              <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
-              <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
-              <p class= btn-btn-warning> Statut : <%= booking.status %>
-            </div>
-          </div>
+<div class="row">
+  <div class="col-sm-6">
+    <h3> Mes réservations </h3>
+      <div class="card-product">
+        <% @bookings_renter.each do |booking| %>
+          <h5 class="card-title"> Votre réservation pour <strong><%= booking.wig.name %></strong> </h5>
+          <%= image_tag booking.wig.photo, width:100 %>
+        <div class="card-product-infos">
+          <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
+          <p class= btn-btn-primary> Statut : <%= booking.status %>
       <% end %>
       </div>
+    </div>
+    <div class="col-sm-6">
+      <div class='location'></div>
+        <h3> Mes demandes de locations </h3>
+        <div class="card-product">
+          <% @bookings_owner.each do |booking| %>
+            <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong></h5>
+            <%= image_tag booking.wig.photo, width:100 %>
+          <div class="card-product-infos">
+            <p class="card-text"> 📅 <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
+              <button type="button" class="btn btn-outline-success">Accepter</button>
+              <button type="button" class="btn btn-outline-danger">Décliner</button>
+          <% end %>
 
 
-
-
-
+  </div>
 </div>
