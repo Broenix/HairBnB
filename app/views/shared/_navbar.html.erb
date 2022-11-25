@@ -11,8 +11,8 @@
     <%= form_with url: wigs_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control form-control-lg",
-      placeholder: "quelle perruque voulez-vous?"%>
+      class: "form-control form-control-lg fs-auto",
+      placeholder: "Perruque mulet, blanc..."%>
         <%= submit_tag "Rechercher", class: 'btn btn-pink' %>
     <% end %>
 
