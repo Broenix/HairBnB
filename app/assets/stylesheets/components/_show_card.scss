@@ -1,10 +1,12 @@
 .container_wig {
   // flex-grow: 0;
   height: 600px;
-  justify-content: space-around;
-  align-items: center;
+  width: 1200px;
   display: flex;
-  background-color: #e9ecef;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 50px;
 
   .card_info_wigs {
     margin-top: 50;
@@ -22,9 +24,12 @@
       object-fit: cover;
       width: 100%;
     }
+
   }
 
   .card_infos_wigs{
+    display: flex;
+    flex-direction: column;
     padding-top: 10px;
   }
   p{
