@@ -1,5 +1,5 @@
 <div class="row my-bookings">
-  <div class="col-sm-6 ">
+  <div class="col-sm-6 min-vh-100">
     <h3> Mes réservations </h3>
     <div class="wrapper-product-booking">
       <% @bookings_renter.each do |booking| %>
@@ -8,8 +8,16 @@
             <%= image_tag booking.wig.photo, width: 100 %>
             <div class="card-product-infos">
               <h5 class="card-title"> Votre réservation pour <strong><%= booking.wig.name %></strong> </h5>
-              <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
-              <p class= btn-btn-primary> Statut : <%= booking.status %>
+
+       <p class="card-text"> 📅  <%= booking.start_date.strftime('%d/%m/%Y') %> - <%= booking.end_date.strftime('%d/%m/%Y') %></p>
+              <p class= btn-btn-primary> Statut : <% if booking.status == "pending" %>
+                  <%= "En attente" %>
+                <% elsif booking.status == "validated" %>
+                  <%= "Validée" %>
+                <% elsif booking.status == "declined" %>
+                  <%= "Refusée" %>
+                <% end %>
+
             </div>
           </div>
         </div>
@@ -17,16 +25,16 @@
     </div>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-6 min-vh-100">
     <h3> Mes demandes de locations </h3>
     <div class="wrapper-product-booking">
       <% @bookings_owner.each do |booking| %>
         <div class="card-iterated">
           <div class="d-flex">
-            <%= image_tag booking.wig.photo, width: 100 %>
-            <div class="card-product-infos">
+            <%= image_tag booking.wig.photo, width: 80 %>
+            <div class="card-product-infos d-auto">
               <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong> </h5>
-              <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
+              <p class="card-text"> 📅  <%= booking.start_date.strftime('%d/%m/%Y') %> - <%= booking.end_date.strftime('%d/%m/%Y') %></p>
               <p class= btn-btn-primary> État de la réservation :
                 <% if booking.status == "pending" %>
                   <%= "En attente" %>
