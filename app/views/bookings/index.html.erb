@@ -23,10 +23,11 @@
           <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong> </h5>
           <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
           <p class= btn-btn-primary> Statut : <%= booking.status %>
-          <button type="button" class="btn btn-outline-success">Accepter</button>
-          <button type="button" class="btn btn-outline-danger">Décliner</button>
+          <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
+          <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
         </div>
       <% end %>
     </div>
   </div>
-</div>
+
+

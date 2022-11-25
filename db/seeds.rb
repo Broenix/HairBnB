@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
-
 puts "Cleaning database..."
 Booking.destroy_all
 User.destroy_all
@@ -88,10 +86,41 @@ booking2 = Booking.create!(
 booking3 = Booking.create!(
   start_date: "2022-11-24",
   end_date:   "2023-01-24",
-  status:      "pending",
+  status:      "validated",
   user: vincent,
   wig: mulet
 )
 
+booking4 = Booking.create!(
+  start_date: "2022-11-23",
+  end_date:   "2023-01-25",
+  status:      "declined",
+  user: cameron,
+  wig: mulet
+)
+
+booking5 = Booking.create!(
+  start_date: "2022-11-02",
+  end_date:   "2023-01-12",
+  status:      "validated",
+  user: dwayne,
+  wig: mulet
+)
+
+booking6 = Booking.create!(
+  start_date: "2023-02-20",
+  end_date:   "2023-02-17",
+  status:      "validated",
+  user: bruce,
+  wig: rose
+)
+
+booking6 = Booking.create!(
+  start_date: "2023-05-11",
+  end_date:   "2023-04-11",
+  status:      "declined",
+  user: bruce,
+  wig: époque
+)
 
 puts "Finished!"
