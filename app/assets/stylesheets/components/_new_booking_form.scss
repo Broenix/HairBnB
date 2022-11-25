@@ -1,4 +1,6 @@
 .form_bookings{
+  width: 500px;
+
   .btn-essential{
     color: black;
     padding: 15px;
@@ -6,7 +8,7 @@
     background: white;
     transition: background 0.3s ease;
     border: 1px solid black;
-    margin: 10px;
+    // margin: 10px;
 
     &:hover{
       background: $pink;

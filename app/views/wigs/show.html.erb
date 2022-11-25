@@ -1,14 +1,12 @@
-<div class= "container_wig mt-5 mb-5">
+<div class= "container_wig">
   <div class= "name_photo_desc">
     <h1><%= @wig.name %></h1>
+    <p>Cette perruque appartient à <%=@wig.user.name%></p>
     <%= image_tag @wig.photo, width:300, height: 300 %>
     <div class="card_infos_wigs" >
-        <p><strong>Description </strong></p>
-        <p><%= @wig.description %></p>
-        <p><strong>Couleur </strong></p>
-        <p><%= @wig.color %></p>
-        <p><strong>Prix </strong></p>
-        <p><%= @wig.renting_price %> €/ jour</p>
+        <p>ℹ️ <%= @wig.description %></p>
+        <p>🎨 <%= @wig.color %></p>
+        <p>💰 <%= @wig.renting_price %> €/ jour</p>
     </div>
   </div>
   <div class="form_bookings">
