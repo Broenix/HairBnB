@@ -15,14 +15,18 @@
           <%=link_to"Mettre ma perruque sur HairBnB", new_wig_path, class: "nav-link"%>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "bruce-willis.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if  current_user%>
+              <%= image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "user-3.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Compte", "#", class: "dropdown-item" %>
               <%= link_to "Messages", "#", class: "dropdown-item" %>
               <%= link_to "Réservations", bookings_path, class: "dropdown-item" %>
               <%= link_to "Favoris", "#", class: "dropdown-item" %>
               <%= link_to "Aide", "#", class: "dropdown-item" %>
-              <%= link_to "Déconnexion", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Déconnexion", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
       </ul>
