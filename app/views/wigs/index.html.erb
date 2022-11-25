@@ -1,5 +1,5 @@
 <div class="row row-cols-lg-4 d-flex justify-content-center">
- <% @wigs.each do |wig| %>
+ <% @wigs_owner.each do |wig| %>
     <div class="card m-2">
         <%= cl_image_tag wig.photo.key, height: 300, width: 300, crop: :fill %>
           <div class="card-body">
