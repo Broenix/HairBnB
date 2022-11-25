@@ -1,0 +1,14 @@
+.btn-pink{
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  background: white;
+  transition: background 0.3s ease;
+  border: 1px solid black;
+  margin: 10px;
+
+  &:hover{
+    background: $pink;
+    border: 1px solid white;
+  }
+}
