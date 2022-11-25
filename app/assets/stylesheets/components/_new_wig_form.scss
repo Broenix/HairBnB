@@ -1,5 +1,6 @@
 .container_form{
-  
+  background-color: $light-gray;
+
   .btn-essential{
     color: black;
     padding: 15px;
@@ -8,10 +9,11 @@
     transition: background 0.3s ease;
     border: 1px solid black;
     margin: 10px;
+    align-items: center;
 
     &:hover{
       background: $pink;
-      border: none;
+      border: 1px solid white;
     }
   }
 

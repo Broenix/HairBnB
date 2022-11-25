@@ -1,7 +1,7 @@
 .my-bookings {
   background-color: #e9ecef;
 
-  h3{
+  h4{
     font-size: 28px;
     font-weight: bold;
     text-align: center;
@@ -11,23 +11,24 @@
   .wrapper-product-booking {
     align-items: center;
     margin: 50px;
-    border-radius: 7px;
+    overflow: hidden;
 
   .card-iterated{
-    padding-bottom: 5px;
-    padding-top: 5px;
+    // padding-bottom: 5px;
+    // padding-top: 5px;
     height: 150px;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     background-color: white;
     display: flex;
     align-items: center;
   }
 
     img {
-      height: 125px;
-      width: 125px;
+      height: 150px;
+      width: 150px;
       object-fit: cover;
       align-items: center;
+
     }
     p {
       font-size: 16px;
@@ -36,8 +37,11 @@
       margin-bottom: 0;
       margin-top: 8px;
     }
-    .card-product-infos {
-      padding: 16px;
-    }
+  
   }
+}
+
+
+.obfit {
+  object-fit: cover;
 }

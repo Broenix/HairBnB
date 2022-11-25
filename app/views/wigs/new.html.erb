@@ -8,9 +8,9 @@
         <%= f.input :name, label: 'Nom', class:'label' %>
 
         <%= f.input :description, label: "Description", class:'label' %>
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column choose_color">
           <%= f.label :color, label: 'Couleur', class:'label' %>
-          <%= f.select :color, Wig::COLOR, include_blank: true %>
+          <%= f.select :color, Wig::COLOR,  { include_blank: true }, { class: "pt-2 pb-2 bg-gray" } %>
         </div>
 
         <%= f.input :renting_price, label: 'Prix de location / jour / €', class:'label' %>
