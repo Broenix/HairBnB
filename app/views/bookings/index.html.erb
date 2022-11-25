@@ -1,12 +1,12 @@
 <div class="row my-bookings">
-  <div class="col-sm-6 min-vh-100">
-    <h3> Mes réservations </h3>
+  <div class="col-sm-6 ">
+    <h4> Mes réservations </h4
     <div class="wrapper-product-booking">
       <% @bookings_renter.each do |booking| %>
-        <div class="card-iterated">
+        <div class="card-iterated mb-3">
           <div class="d-flex">
             <%= image_tag booking.wig.photo, width: 100 %>
-            <div class="card-product-infos">
+            <div class="card-product-infos ps-4 pt-2">
               <h5 class="card-title"> Votre réservation pour <strong><%= booking.wig.name %></strong> </h5>
 
        <p class="card-text"> 📅  <%= booking.start_date.strftime('%d/%m/%Y') %> - <%= booking.end_date.strftime('%d/%m/%Y') %></p>
@@ -25,14 +25,16 @@
     </div>
   </div>
 
-  <div class="col-sm-6 min-vh-100">
-    <h3> Mes demandes de locations </h3>
+  <div class="col-sm-6">
+    <h4> Mes demandes de locations </h4>
     <div class="wrapper-product-booking">
       <% @bookings_owner.each do |booking| %>
-        <div class="card-iterated">
+        <div class="card-iterated mb-3">
           <div class="d-flex">
-            <%= image_tag booking.wig.photo, width: 80 %>
-            <div class="card-product-infos d-auto">
+            <div class="obfit">
+              <%= image_tag booking.wig.photo, class: "img" %>
+            </div>
+            <div class="card-product-infos ps-4 pt-2">
               <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong> </h5>
               <p class="card-text"> 📅  <%= booking.start_date.strftime('%d/%m/%Y') %> - <%= booking.end_date.strftime('%d/%m/%Y') %></p>
               <p class= btn-btn-primary> État de la réservation :
@@ -45,8 +47,8 @@
                 <% end %>
                 <% if booking.status == "pending" %>
                   <div class="d-flex">
-                    <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
-                    <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
+                    <%= link_to "Accepter", accept_owner_booking_path(booking), class: "btn btn-pink2 me-2",data: { turbo_method: :patch } %>
+                    <%= link_to "Refuser", decline_owner_booking_path(booking), class: "btn btn-pink2",data: { turbo_method: :patch } %>
                   </div>
                 <% end %>
               </p>
