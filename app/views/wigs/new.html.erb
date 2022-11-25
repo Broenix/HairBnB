@@ -8,8 +8,7 @@
         <%= f.input :name, label: 'Nom', class:'label' %>
 
         <%= f.input :description, label: "Description", class:'label' %>
-
-        <div class= "list_color">
+        <div class="d-flex flex-column">
           <%= f.label :color, label: 'Couleur', class:'label' %>
           <%= f.select :color, Wig::COLOR, include_blank: true %>
         </div>
