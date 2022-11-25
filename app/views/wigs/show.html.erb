@@ -6,10 +6,10 @@
     <div class="card_infos_wigs" >
       <h1><%= @wig.name %></h1>
       <p>Cette perruque appartient à <%=@wig.user.name%></p>
-          <p>ℹ️ <%= @wig.description %></p>
-          <p>🎨 <%= @wig.color %></p>
-          <p>💰 <%= @wig.renting_price %> €/ jour</p>
-      </div>
+      <p>ℹ️ <%= @wig.description %></p>
+      <p>🎨 <%= @wig.color %></p>
+      <p>💰 <%= @wig.renting_price %> €/ jour</p>
+    </div>
     <div class="form_bookings">
       <div class="bg-white rounded p-5 m-5">
         <h3>Louer la perruque</h3>
@@ -20,4 +20,5 @@
         <% end %>
       </div>
     </div>
+  </div>
 </div>
