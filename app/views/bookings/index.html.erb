@@ -8,7 +8,7 @@
             <%= image_tag booking.wig.photo, width: 100 %>
             <div class="card-product-infos">
               <h5 class="card-title"> Votre réservation pour <strong><%= booking.wig.name %></strong> </h5>
-              <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
+              <p class="card-text"> 📅  <%= booking.start_date.strftime('%d/%m/%Y') %> - <%= booking.end_date.strftime('%d/%m/%Y') %></p>
               <p class= btn-btn-primary> Statut : <%= booking.status %>
             </div>
           </div>
@@ -26,7 +26,7 @@
             <%= image_tag booking.wig.photo, width: 100 %>
             <div class="card-product-infos">
               <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong> </h5>
-              <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
+              <p class="card-text"> 📅  <%= booking.start_date.strftime('%d/%m/%Y') %> - <%= booking.end_date.strftime('%d/%m/%Y') %></p>
               <p class= btn-btn-primary> État de la réservation :
                 <% if booking.status == "pending" %>
                   <%= "En attente" %>
