@@ -18,4 +18,8 @@ class Owner::BookingsController < ApplicationController
       redirect_to @booking, notice: 'Booking could not be rejected - please try again'
     end
   end
+
+  def index
+    @wigs_owner = current_user.wig
+  end
 end
