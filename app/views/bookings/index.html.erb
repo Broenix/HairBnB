@@ -28,8 +28,10 @@
                 <%= "Refusée" %>
               <% end %>
               <% if booking.status == "pending" %>
-                <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
-                <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
+                <div>
+                  <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch, class: 'btn btn-pink'%>
+                  <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch, class: 'btn btn-pink' %>
+                </div>
               <% end %>
             </div>
           </div>
