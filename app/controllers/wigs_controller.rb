@@ -2,9 +2,17 @@ class WigsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   skip_before_action :authenticate_user!, only: :show
 
-
   def index
-    @wigs = Wig.all
+    if params[:query].present?
+      sql_query = <<~SQL
+      wigs.name ILIKE :query
+      OR wigs.description ILIKE :query
+      OR wigs.color ILIKE :query
+    SQL
+      @wigs = Wig.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @wigs = Wig.all
+    end
   end
 
   def show
