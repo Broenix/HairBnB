@@ -1,22 +1,24 @@
-<div class= "container_wig">
-  <div class= "name_photo_desc">
-    <h1><%= @wig.name %></h1>
-    <p>Cette perruque appartient à <%=@wig.user.name%></p>
-    <%= image_tag @wig.photo, width:300, height: 300 %>
-    <div class="card_infos_wigs" >
-        <p>ℹ️ <%= @wig.description %></p>
-        <p>🎨 <%= @wig.color %></p>
-        <p>💰 <%= @wig.renting_price %> €/ jour</p>
+<div class= "container d-flex justify-content-center p5">
+  <div class="container_wig">
+    <div class= "name_photo_desc">
+      <%= image_tag @wig.photo, width:400, height: 400 %>
     </div>
-  </div>
-  <div class="form_bookings">
-    <div class="bg-white rounded p-5 m-5">
-      <h3>Louer la perruque</h3>
-      <%= simple_form_for [@wig, @booking] do |f| %>
-        <%= f.input :start_date, html5: true, label: "Début de la location" %>
-        <%= f.input :end_date, html5: true, label: 'Fin de location' %>
-        <%= f.submit "Soumettre ma demande", class: 'btn btn-pink' %>
-      <% end %>
+    <div class="card_infos_wigs" >
+      <h1><%= @wig.name %></h1>
+      <p>Cette perruque appartient à <%=@wig.user.name%></p>
+          <p>ℹ️ <%= @wig.description %></p>
+          <p>🎨 <%= @wig.color %></p>
+          <p>💰 <%= @wig.renting_price %> €/ jour</p>
+      </div>
+    <div class="form_bookings">
+      <div class="bg-white rounded p-5 m-5">
+        <h3>Louer la perruque</h3>
+        <%= simple_form_for [@wig, @booking] do |f| %>
+          <%= f.input :start_date, html5: true, label: "Début de la location" %>
+          <%= f.input :end_date, html5: true, label: 'Fin de location' %>
+          <%= f.submit "Soumettre ma demande", class: 'btn btn-essential' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
