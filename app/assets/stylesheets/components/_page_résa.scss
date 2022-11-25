@@ -1,4 +1,5 @@
-.mes-resas {
+.my-bookings {
+  background-color: #e9ecef;
 
   h3{
     font-size: 28px;
@@ -7,18 +8,26 @@
     padding-top: 15px;
   }
 
-  .card-product {
-    overflow: hidden;
-    height: 120px;
-    background: white;
+  .wrapper-product-booking {
+    align-items: center;
+    margin: 50px;
+    border-radius: 7px;
+
+  .card-iterated{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    height: 150px;
+    margin-bottom: 15px;
+    background-color: white;
     display: flex;
     align-items: center;
-    height: 200px;
+  }
 
     img {
-      height: 100%;
-      width: 200px;
+      height: 125px;
+      width: 125px;
       object-fit: cover;
+      align-items: center;
     }
     p {
       font-size: 16px;

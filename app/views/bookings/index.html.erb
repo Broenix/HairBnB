@@ -1,33 +1,51 @@
-<div class="row mes-resas">
-  <div class="col-sm-6">
+<div class="row my-bookings">
+  <div class="col-sm-6 ">
     <h3> Mes réservations </h3>
-    <div class="card-product">
-      <div class="image_title"></div>
-        <% @bookings_renter.each do |booking| %>
-          <%= image_tag booking.wig.photo, width: 100 %>
-          <div class="card-product-infos">
-            <h5 class="card-title"> Votre réservation pour <strong><%= booking.wig.name %></strong> </h5>
-            <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
-            <p class= btn-btn-primary> Statut : <%= booking.status %>
+    <div class="wrapper-product-booking">
+      <% @bookings_renter.each do |booking| %>
+        <div class="card-iterated">
+          <div class="d-flex">
+            <%= image_tag booking.wig.photo, width: 100 %>
+            <div class="card-product-infos">
+              <h5 class="card-title"> Votre réservation pour <strong><%= booking.wig.name %></strong> </h5>
+              <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
+              <p class= btn-btn-primary> Statut : <%= booking.status %>
+            </div>
           </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-sm-6">
-  <h3> Mes demandes de location </h3>
-  <div class="card-product">
-    <div class="image_title"></div>
-      <% @bookings_owner.each do |booking| %>
-        <%= image_tag booking.wig.photo, width: 100 %>
-        <div class="card-product-infos">
-          <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong> </h5>
-          <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
-          <p class= btn-btn-primary> Statut : <%= booking.status %>
-          <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
-          <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
         </div>
       <% end %>
     </div>
   </div>
 
-
+  <div class="col-sm-6">
+    <h3> Mes demandes de locations </h3>
+    <div class="wrapper-product-booking">
+      <% @bookings_owner.each do |booking| %>
+        <div class="card-iterated">
+          <div class="d-flex">
+            <%= image_tag booking.wig.photo, width: 100 %>
+            <div class="card-product-infos">
+              <h5 class="card-title"> Votre demande pour <strong><%= booking.wig.name %></strong> </h5>
+              <p class="card-text"> 📅  <%= booking.start_date %> - <%= booking.end_date %></p>
+              <p class= btn-btn-primary> État de la réservation :
+                <% if booking.status == "pending" %>
+                  <%= "En attente" %>
+                <% elsif booking.status == "validated" %>
+                  <%= "Validée" %>
+                <% elsif booking.status == "declined" %>
+                  <%= "Refusée" %>
+                <% end %>
+                <% if booking.status == "pending" %>
+                  <div class="d-flex">
+                    <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
+                    <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
+                  </div>
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
