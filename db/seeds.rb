@@ -86,7 +86,7 @@ booking2 = Booking.create!(
 booking3 = Booking.create!(
   start_date: "2022-11-24",
   end_date:   "2023-01-24",
-  status:      "validated",
+  status:      "pending",
   user: vincent,
   wig: mulet
 )
@@ -94,7 +94,7 @@ booking3 = Booking.create!(
 booking4 = Booking.create!(
   start_date: "2022-11-23",
   end_date:   "2023-01-25",
-  status:      "declined",
+  status:      "pending",
   user: cameron,
   wig: mulet
 )
@@ -102,7 +102,7 @@ booking4 = Booking.create!(
 booking5 = Booking.create!(
   start_date: "2022-11-02",
   end_date:   "2023-01-12",
-  status:      "validated",
+  status:      "pending",
   user: dwayne,
   wig: mulet
 )
@@ -110,7 +110,7 @@ booking5 = Booking.create!(
 booking6 = Booking.create!(
   start_date: "2023-02-20",
   end_date:   "2023-02-17",
-  status:      "validated",
+  status:      "pending",
   user: bruce,
   wig: rose
 )
