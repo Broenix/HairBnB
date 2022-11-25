@@ -20,8 +20,10 @@
               <p class= "btn-btn-warning"> Reservation  <%= image_tag booking.wig.photo, width:100 %>
               <p class="fw-lighter">Reservation du <%= booking.start_date %> au <%= booking.end_date %> par <%= booking.user.name %></p>
               <p class= btn-btn-warning> Statut : <%= booking.status %>
-              <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
-              <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
+              <% if booking.status == "pending" %>
+                <%= button_to "Accepter", accept_owner_booking_path(booking), method: :patch %>
+                <%= button_to "Refuser", decline_owner_booking_path(booking), method: :patch %>
+              <% end %>
             </div>
           </div>
       <% end %>
